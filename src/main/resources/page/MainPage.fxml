@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.fx.controller.MainPageController">
+    <top>
+        <VBox fx:id="topPanels" alignment="CENTER_LEFT" style="-fx-background-color: #EEEEEE;" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label text=" y = ">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                        <TextField fx:id="paramTextField5" alignment="CENTER_RIGHT" onTextChange="#onInputUpdate" prefWidth="40.0" />
+                        <Label depthTest="ENABLE" text=" x⁴ + ">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                        <TextField fx:id="paramTextField4" alignment="CENTER_RIGHT" onTextChange="#onInputUpdate" prefWidth="40.0" />
+                        <Label text=" x³ + ">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                        <TextField fx:id="paramTextField3" alignment="CENTER_RIGHT" onTextChange="#onInputUpdate" prefWidth="40.0" />
+                        <Label text=" x² + ">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                        <TextField fx:id="paramTextField2" alignment="CENTER_RIGHT" onTextChange="#onInputUpdate" prefWidth="40.0" />
+                        <Label text=" x + ">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                        <TextField fx:id="paramTextField1" alignment="CENTER_RIGHT" onTextChange="#onInputUpdate" prefWidth="40.0" />
+                  <Label text="Bounds: ">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="leftBoundTextField" alignment="CENTER" onTextChange="#onInputUpdate" prefWidth="50.0" />
+                  <TextField fx:id="rightBoundTextField" alignment="CENTER" onTextChange="#onInputUpdate" prefWidth="50.0">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                  </TextField>
+                        <Label text="Points Amount: ">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin></Label>
+                        <TextField fx:id="pointsAmountTextField" onTextChange="#onInputUpdate" prefWidth="70.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                  <Label text="Population Size: " />
+                  <TextField fx:id="populationSizeTextField" layoutX="121.0" layoutY="10.0" prefWidth="80.0" />
+                  <Label text="Max Generations: ">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="maxGenerationsTextField" prefWidth="80.0" />
+                  <Label text="Aimed Fitness: ">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="aimedFitnessTextField" prefWidth="70.0" />
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label fx:id="dispersionLabel" minWidth="110.0" prefWidth="110.0" text="Dispersion: 1.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Slider fx:id="dispersionSlider" blockIncrement="0.1" minWidth="655.0" showTickLabels="true" showTickMarks="true" value="1.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+        </VBox>
+    </top>
+    <center>
+        <LineChart fx:id="chart" alternativeColumnFillVisible="true" animated="false" createSymbols="false" BorderPane.alignment="CENTER">
+            <xAxis>
+                <NumberAxis side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" />
+            </yAxis>
+        </LineChart>
+    </center>
+   <bottom>
+      <VBox alignment="CENTER_LEFT" style="-fx-background-color: #EEEEEE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="algParametersLabel">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <BorderPane>
+               <left>
+                  <Label fx:id="algInformationLabel" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+               </left>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <right>
+                  <HBox BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="btnSavePoints" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefWidth="90.0" text="Save Points">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnStop" disable="true" mnemonicParsing="false" prefWidth="75.0" text="Stop">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnRun" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefWidth="75.0" text="Run" />
+                     </children>
+                  </HBox>
+               </right>
+            </BorderPane>
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </VBox>
+   </bottom>
+</BorderPane>

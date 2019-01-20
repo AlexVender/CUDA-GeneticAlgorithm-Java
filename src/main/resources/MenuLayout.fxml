@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane minHeight="425.0" minWidth="600.0" prefHeight="425.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.fx.controller.MenuLayoutController">
+    <!--<top>-->
+        <!--<MenuBar BorderPane.alignment="CENTER">-->
+            <!--<menus>-->
+                <!--<Menu mnemonicParsing="false" text="Выбор">-->
+                    <!--<items>-->
+                        <!--&lt;!&ndash;<MenuItem mnemonicParsing="false" onAction="#handleAccounts" text="Счета" />&ndash;&gt;-->
+                    <!--</items>-->
+                    <!--<items>-->
+                        <!--&lt;!&ndash;<MenuItem mnemonicParsing="false" onAction="#handleIncomeAndExpenses" text="Доходы и Расходы" />&ndash;&gt;-->
+                    <!--</items>-->
+                    <!--<items>-->
+                        <!--&lt;!&ndash;<MenuItem mnemonicParsing="false" onAction="#handleOperations" text="Операции"/>&ndash;&gt;-->
+                    <!--</items>-->
+                <!--</Menu>-->
+                <!--<Menu mnemonicParsing="false" text="Инструменты">-->
+                    <!--<items>-->
+                        <!--&lt;!&ndash;<MenuItem mnemonicParsing="false" onAction="#handleStatistics" text="Статистика Операций"/>&ndash;&gt;-->
+                    <!--</items>-->
+                    <!--<items>-->
+                        <!--&lt;!&ndash;<MenuItem mnemonicParsing="false" text="О программе" onAction="#handleInfo"/>&ndash;&gt;-->
+                    <!--</items>-->
+                <!--</Menu>-->
+            <!--</menus>-->
+        <!--</MenuBar>-->
+    <!--</top>-->
+</BorderPane>

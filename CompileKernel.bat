@@ -1,0 +1,1 @@
+nvcc -m64 -ptx ./kernels/GPU_fitness_kernel.cu -o ./kernels/GPU_fitness_kernel.ptx
